@@ -1,0 +1,692 @@
+@import url('inc/css/normalize.css');
+@import url('terry-css.css');
+
+@import "inc/css/font-awesome.css";
+/*
+Theme Name: Waterstreet
+Theme URI: https://github.com/saltcod/waterstreet
+Author: Terry Sutton / Automattic
+Author URI: http://waterstreetgm.org.
+Description: WaterstreetGM's fork of <code>_s</code>, or <em>underscores</em> from Automattic.
+Version: 0.9
+License: GNU General Public License
+Tags:
+ 
+*/
+/*---------------------------------------------------
+    LESS Elements 0.6
+  ---------------------------------------------------
+    A set of useful LESS mixins by Dmitry Fadeyev
+    Special thanks for mixin suggestions to:
+      Kris Van Herzeele,
+      Benoit Adam,
+      Portenart Emile-Victor,
+      Ryan Faerman
+
+    More info at: http://lesselements.com
+    -----------------------------------------------------*/
+    * {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    /* Font Awesome icon font */
+/* =Global
+----------------------------------------------- */
+body,
+button,
+input,
+select,
+textarea {
+  color: #404040;
+  font-family: sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+}
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+}
+hr {
+  background-color: #ccc;
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5em;
+}
+/* Text elements */
+p {
+  margin-bottom: 1.5em;
+}
+ul,
+ol {
+  margin: 0px;
+  list-style: none;
+  padding: 0px;
+}
+
+
+/* Links */
+
+a {
+  color: royalblue;
+}
+a:visited {
+  color: purple;
+}
+a:hover,
+a:focus,
+a:active {
+  color: midnightblue;
+}
+/* Font awesome */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../ing/fonts/fontawesome-webfont.eot');
+  src: url('../ing/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), url('../ing/fonts/fontawesome-webfont.woff') format('woff'), url('../ing/fonts/fontawesome-webfont.ttf') format('truetype'), url('../ing/fonts/fontawesome-webfont.svg#FontAwesome') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* =Structure
+----------------------------------------------- */
+header#masthead {
+  float: left;
+  margin-top: -20px;
+}
+
+#page {
+  background: #fff;
+}
+#primary {
+  margin: 40px 0px 0px 230px;
+  padding-left: 40px;
+  max-width: 800px;
+}
+#secondary {
+  background: url(assets/border.jpg) repeat-y 100%; 
+  width: 233px;
+  position: fixed;
+  height: 100%;   
+  float: left;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#illustrations {
+  display: none;
+}
+#loader {
+  position: absolute;
+  top: 256px;
+  left: 575px;
+  z-index: 100;
+}
+#side-links {
+  margin-top: -145px;
+  float: left;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* =Header
+----------------------------------------------- */
+.site-title {
+  font-size: 24px;
+}
+.site-description {
+  font-size: 18px;
+}
+/* Alignment */
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
+}
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
+}
+.aligncenter {
+  clear: both;
+  display: block;
+  margin: 0 auto;
+}
+
+/* =Secondary
+----------------------------------------------- */
+#secondary h1 {
+  font-size: .75em;
+}
+/* Text meant only for screen readers */
+.assistive-text {
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+}
+/* =Menu
+----------------------------------------------- */
+
+a.about {
+  display: block;
+  margin-bottom: 15px;
+  background: url(assets/about.png) no-repeat 75px;
+  padding: 33px 0px 0px;
+}
+
+a.buy {
+  display: block;
+  margin-top: 20px;
+  background: url(assets/buy.png) no-repeat 69px;
+  padding: 0px 0px 45px 0px;
+}
+
+#email 
+{
+  position: absolute;
+  bottom: 80px;
+}
+
+a.email-link {
+  display: block;
+  margin-top: 10px;
+  background: url(assets/email.jpg) no-repeat 57px;
+  padding: 0px 0px 37px 0px;
+}
+
+a.about:hover { background: url(assets/about-active.png) no-repeat 75px; }
+a.buy:hover { background: url(assets/buy-active.png) no-repeat 69px; }
+a.email-link:hover { background: url(assets/email-active.gif) no-repeat 42px; padding: 0px 0px 38px 0px; }
+
+
+ul#categories {
+  width: 143px;
+  margin: 0 auto;
+}
+
+#categories a {
+  display: block;
+  width: 144px;
+  height: 31px;
+}
+
+#menu-categories li { margin: 20px 0px 0px; }
+
+#menu-categories a { color: transparent; padding: 15px 45px 0px; }
+
+li.menu-item-965 a { background: url(assets/penandink.png) top center no-repeat; }
+li.menu-item-965 a:hover, li.menu-item-965.current-menu-item a { background: url(assets/penandink-active.png) 19px 0px no-repeat; }
+
+li.menu-item-962 a { background: url(assets/paintings.png) top center no-repeat; }
+li.menu-item-962 a:hover, li.menu-item-962.current-menu-item a { background: url(assets/paintings-active.png) 7px 0px no-repeat; }
+
+li.menu-item-959 a { background: url(assets/portraits.png) top center no-repeat; }
+li.menu-item-959 a:hover, li.menu-item-959.current-menu-item a { background: url(assets/portraits-active.png) 18px 1px no-repeat; }
+
+li.menu-item-961 a { background: url(assets/spots.png) top center no-repeat; }
+li.menu-item-961 a:hover, li.menu-item-961.current-menu-item a { background: url(assets/spots-active.png) 6px 0px no-repeat; }
+
+
+
+/* =Content
+----------------------------------------------- */
+.hentry {
+  margin: 0 0 1.5em;
+}
+.entry-meta {
+  clear: both;
+}
+.byline {
+  display: none;
+}
+.single .byline,
+.group-blog .byline {
+  display: inline;
+}
+.entry-content,
+.entry-summary {
+  margin: 1.5em 0 0;
+}
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em;
+}
+
+/* =Post Thumbnail
+----------------------------------------------- */
+
+.post-thumbnail {
+  width: 155px;
+  margin-bottom: 5px;
+}
+
+.post-thumbnail img {
+  width: 100%;
+  height: auto;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  opacity: 1;
+  
+}
+
+.post-thumbnail img:hover {
+  opacity: .8;
+}
+
+
+
+/* =Asides
+----------------------------------------------- */
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+  display: none;
+}
+
+/* =Media
+----------------------------------------------- */
+.site-header img,
+.entry-content img,
+.comment-content img,
+.widget img {
+  max-width: 100%;
+  /* Fluid images for posts, comments, and widgets */
+
+}
+.site-header img,
+.entry-content img,
+img[class*="align"],
+img[class*="wp-image-"] {
+  height: auto;
+  /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+
+}
+.site-header img,
+.entry-content img,
+img.size-full {
+  max-width: 100%;
+  width: auto;
+  /* Prevent stretching of full-size images with height and width attributes in IE8 */
+
+}
+.entry-content img.wp-smiley,
+.comment-content img.wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+.wp-caption {
+  border: 1px solid #ccc;
+  max-width: 100%;
+}
+.wp-caption.aligncenter,
+.wp-caption.alignleft,
+.wp-caption.alignright {
+  margin-bottom: 1.5em;
+}
+.wp-caption img {
+  display: block;
+  margin: 1.2% auto 0;
+  max-width: 98%;
+}
+.wp-caption-text {
+  text-align: center;
+}
+.wp-caption .wp-caption-text {
+  margin: 0.8075em 0;
+}
+.site-content .gallery {
+  margin-bottom: 1.5em;
+}
+.site-content .gallery a img {
+  border: none;
+  height: auto;
+  max-width: 90%;
+}
+.site-content .gallery dd {
+  margin: 0;
+}
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
+/* =Navigation
+----------------------------------------------- */
+.site-content .site-navigation {
+  overflow: hidden;
+  margin-right: 30px;
+}
+
+.site-content .nav-previous {
+  float: left;
+}
+.site-content .nav-next {
+  float: right;
+}
+
+.site-navigation a { text-decoration: none; }
+
+h1.entry-title {
+}
+
+.entry-header {
+  border-top: dotted 1px rgb(160, 160, 160);
+  margin-top: 15px;
+  margin-right: 30px;
+}
+
+
+/* =Comments
+----------------------------------------------- */
+/* =Widgets
+----------------------------------------------- */
+
+.widget-title {
+  display: none;
+}
+
+.widget {
+  margin: 0 0 1.5em;
+}
+/* Search widget */
+#searchsubmit {
+  display: none;
+}
+/* Extra Text elements */
+blockquote {
+  margin: 0 1.5em;
+}
+dt {
+  font-weight: bold;
+}
+dd {
+  margin: 0 1.5em 1.5em;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn,
+cite,
+em,
+i {
+  font-style: italic;
+}
+address {
+  margin: 0 0 1.5em;
+}
+pre {
+  background: #eee;
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  padding: 1.6em;
+  overflow: auto;
+  max-width: 100%;
+}
+code,
+kbd,
+tt,
+var {
+  font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+abbr,
+acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help;
+}
+mark,
+ins {
+  background: #fff9c0;
+  text-decoration: none;
+}
+sup,
+sub {
+  font-size: 75%;
+  height: 0;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  bottom: 1ex;
+}
+sub {
+  top: .5ex;
+}
+small {
+  font-size: 75%;
+}
+big {
+  font-size: 125%;
+}
+figure {
+  margin: 0;
+}
+table {
+  margin: 0 0 1.5em;
+  width: 100%;
+}
+th {
+  font-weight: bold;
+}
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* Corrects font size not being inherited in all browsers */
+
+  margin: 0;
+  /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+
+  vertical-align: baseline;
+  /* Improves appearance and consistency in all browsers */
+
+  *vertical-align: middle;
+  /* Improves appearance and consistency in all browsers */
+
+}
+button,
+input {
+  line-height: normal;
+  /* Addresses FF3/4 setting line-height using !important in the UA stylesheet */
+
+  *overflow: visible;
+  /* Corrects inner spacing displayed oddly in IE6/7 */
+
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  border: 1px solid #ccc;
+  border-color: #ccc #ccc #bbb #ccc;
+  border-radius: 3px;
+  background: #e6e6e6;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  /* Improves usability and consistency of cursor style between image-type 'input' and others */
+
+  -webkit-appearance: button;
+  /* Corrects inability to style clickable 'input' types in iOS */
+
+  font-size: 12px;
+  font-size: 1.4rem;
+  line-height: 1;
+  padding: 1.12em 1.5em 1em;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+button:hover,
+html input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  border-color: #ccc #bbb #aaa #bbb;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+}
+button:focus,
+html input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+html input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+  border-color: #aaa #bbb #bbb #bbb;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* Addresses box sizing set to content-box in IE8/9 */
+
+  padding: 0;
+  /* Addresses excess padding in IE8/9 */
+
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* Addresses appearance set to searchfield in S5, Chrome */
+
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration {
+  /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+
+  -webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+
+  border: 0;
+  padding: 0;
+}
+input[type=text],
+input[type=email],
+textarea {
+  color: #666;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+input[type=text]:focus,
+input[type=email]:focus,
+textarea:focus {
+  color: #111;
+}
+input[type=text],
+input[type=email] {
+  padding: 3px;
+}
+textarea {
+  overflow: auto;
+  /* Removes default vertical scrollbar in IE6/7/8/9 */
+
+  padding-left: 3px;
+  vertical-align: top;
+  /* Improves readability and alignment in all browsers */
+
+  width: 98%;
+}
+/* =Footer
+----------------------------------------------- */
+footer#colophon {
+  color: white;
+  background: #444;
+  margin-left: 300px;
+}
+footer#colophon a {
+  color: white;
+}
+
+.footer-border {
+background: #fff;
+position: fixed;
+width: 100%;
+bottom: 0;
+height: 158px;
+padding-top: 15px;
+}
+
+.footer {
+height: 60px;
+background: url(/wp-content/uploads/2013/07/footer_border.jpg) repeat-x;
+}
+
+.side-bottom-border {
+}
+
+/* =Group/Clearfix
+-------------------------------------------------------------- */
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  zoom: 1;
+  /* For IE 6/7 (trigger hasLayout) */
+
+}
+/* =Media Queries 
+----------------------------------------------- */
+/******************************************************************
+Graciously borrowed from Eddie Machado's Bones
+http://themble.com/bones/
+******************************************************************/
+/*
+LARGER MOBILE DEVICES
+This is for devices like the Galaxy Note or something that's
+larger than an iPhone but smaller than a tablet. 
+*/
+@media only screen and (min-width: 481px) {
+  body {
+  }
+}
+/*
+TABLET & SMALLER LAPTOPS
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. 
+*/
+@media only screen and (min-width: 768px) {
+  body {
+  }
+}
+/*
+RETINA (2x RESOLUTION DEVICES)
+This applies to the retina iPhone (4s) and iPad (2,3) along with
+other displays with a 2x resolution. You can also create a media
+query for retina AND a certain size if you want. Go Nuts.
+*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  body {
+  }
+}

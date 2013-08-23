@@ -1,0 +1,34 @@
+.nav-previous a,
+.nav-next a{
+	-webkit-transition: all 0.3s ease;
+  	-moz-transition: all 0.3s ease;
+  	-ms-transition: all 0.3s ease;
+  	-o-transition: all 0.3s ease;
+  	transition: all 0.4s ease;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	float: left;
+	height: 50px;
+} 
+
+.nav-previous a{
+	background: url(assets/Prev_off.png) no-repeat;
+	width: 75px;
+	margin-left: 45px;
+	
+}
+.nav-next a{
+	background: url(assets/Next_off.png) no-repeat;
+	width: 75px;
+	}
+
+
+.nav-previous a:hover{
+	background: url(assets/Prev_on.png) no-repeat;
+}
+.nav-next a:hover{
+	background: url(assets/Next_on.png) no-repeat;
+}
+
+
